@@ -1,0 +1,56 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Category Details{% endblock title %}
+{% block content %}
+
+{% include '__partials/__page_title_header.html' %}
+
+{% include '__partials/__divider.html' %}
+
+<div class="ui relaxed one column grid container">
+    <div class="column">
+        <p class="ui green raised segment">
+            Audiam quaerendum eu sea, pro omittam definiebas ex. Te est latine definitiones. Quot wisi nulla ex duo. Vis
+            sint solet expetenda ne, his te phaedrum referrentur consectetuer. Id vix fabulas oporteat, ei quo vide
+            phaedrum, vim vivendum maiestatis in.
+            Eu quo homero blandit intellegebat. Incorrupte consequuntur mei id. Mei ut facer dolores adolescens, no
+            illum
+            aperiri quo, usu odio brute at. Qui te porro electram, ea dico facete utroque quo. Populo quodsi te eam,
+            wisi
+            everti eos ex, eum elitr altera utamur at. Quodsi convenire mnesarchum eu per, quas minimum postulant per
+            id.
+        </p>
+    </div>
+</div>
+
+{% include '__partials/__divider.html' %}
+
+<div class="ui relaxed four column grid container">
+    {% for toy in toys %}
+    <div class="column">
+        <div class="ui card">
+            <a class="image" href="{{ toy.get_absolute_url }}">
+                <img src="{{ toy.image.url }}" alt=""/>
+            </a>
+            <div class="content">
+                <a class="header" href="{{ toy.get_absolute_url }}">{{ toy.name }}</a>
+                <div class="meta">
+                    <span class="date">{{ toy.sku }}</span>
+                </div>
+            </div>
+            <div class="extra content">
+                <span>
+                    {{ toy.price }} LE.
+                </span>
+                <span class="right floated">
+                    <button class="ui button">Add To Cart</button>
+                </span>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+
+{% include '__partials/__page_footer_padding.html' %}
+
+{% endblock content %}

@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}{{ page }}{% endblock title %}
+{% block content %}
+
+{% include '__partials/__page_title_header.html' %}
+
+{% include '__partials/__divider.html' %}
+
+<div class="ui container">
+    <div class="ui grid">
+        <div class="column">
+            <div class="ui green raised segment">
+                <img src="{% static 'images/about.png' %}" class="ui fluid image">
+            </div>
+        </div>
+    </div>
+</div>
+
+{% include '__partials/__divider.html' %}
+
+<div class="ui container">
+    <div class="ui grid">
+        <div class="justified column">
+            <div class="ui basic segment">
+                <h3 class="ui green header">Our Timeline</h3>
+            </div>
+            <div class="ui basic segment">
+                <p>For more than 40 years The founders of Edu-Fun<i class="registered outline icon"></i> had established
+                    a large chain of schools in the Middle
+                    East. These schools were run on non-profit basis and aimed to raise the standard of education in the
+                    region.</p>
+            </div>
+            <div class="ui basic segment">
+                <p>The need for quality educational toys and equipment at affordable prices in the region became an
+                    obvious market demand to them. When Edu-Fun<i class="registered outline icon"></i> was first
+                    established as Educational Projects Co. in 1987, it was the first and only company in the field in
+                    the Middle East. Now its products can be found in more than 25 countries. Edu-Fun<i
+                            class="registered outline icon"></i> continues to be a leading company which still has many
+                    goals to achieve in order to fulfill the aim which the company
+                    was built for.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% include '__partials/__page_footer_padding.html' %}
+
+{% endblock content %}

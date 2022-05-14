@@ -1,0 +1,97 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}{{ page }}{% endblock title %}
+{% block content %}
+
+{% include '__partials/__page_title_header.html' %}
+
+{% include '__partials/__divider.html' %}
+
+<div class="ui container">
+    <div class="ui grid">
+        <div class="column">
+            <div class="ui green raised segment">
+                <img src="{% static 'images/about.png' %}" class="ui fluid image">
+            </div>
+        </div>
+    </div>
+</div>
+
+{% include '__partials/__divider.html' %}
+
+<div class="ui justified text container">
+    <div class="ui grid">
+        <div class="column">
+            <p>In Edu-Fun<i class="registered outline icon"></i> Egypt, we demonstrate and introduce only some of our
+                product range and the possibilities that can be done with it. To view the complete range as well as an
+                in-depth look into the information about the product ranges available please visit www.edu-fun.com</p>
+            <p>Fit-outs and total furniture solutions for early learning centres are available through our dealers in
+                Egypt and Mena Region <a href="{% url 'pages:sales_offices' %}">Sales Offices</a></p>
+        </div>
+    </div>
+</div>
+
+{% include '__partials/__divider.html' %}
+
+<div class="ui center aligned container">
+    <div class="ui grid">
+        <div class="column">
+            <button id="Flipper_Left" class="ui icon button" onclick="flip_me_left()">
+                <i class="angle double left icon"></i>
+            </button>
+            <div class="ui cube shape">
+                <div class="sides">
+                    <div class="active side">
+                        <div class="content">
+                            <div class="center">
+                                <img src="{% static 'images/ideas/idea1.png' %}" class="ui rounded massive image"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="side">
+                        <div class="content">
+                            <div class="center">
+                                <img src="{% static 'images/ideas/idea2.jpg' %}" class="ui rounded massive image"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="side">
+                        <div class="content">
+                            <div class="center">
+                                <img src="{% static 'images/ideas/idea3.png' %}" class="ui rounded massive image"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="side">
+                        <div class="content">
+                            <div class="center">
+                                <img src="{% static 'images/ideas/idea4.png' %}" class="ui rounded massive image"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="side">
+                        <div class="content">
+                            <div class="center">
+                                <img src="{% static 'images/ideas/idea5.png' %}" class="ui rounded massive image"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="side">
+                        <div class="content">
+                            <div class="center">
+                                <img src="{% static 'images/ideas/idea6.jpeg' %}" class="ui rounded massive image"/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button id="Flipper_Right" class="ui right icon button" onclick="flip_me_right()">
+                <i class="angle double right icon"></i>
+            </button>
+        </div>
+    </div>
+</div>
+
+{% include '__partials/__page_footer_padding.html' %}
+
+{% endblock content %}

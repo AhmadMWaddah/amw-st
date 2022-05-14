@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}{{ page }}{% endblock title %}
+{% block content %}
+
+
+{% include '__partials/__page_title_header.html' %}
+
+{% include '__partials/__divider.html' %}
+
+<div class="ui relaxed column grid container">
+    <div class="column">
+        <div class="ui tertiary segment">
+            <h4>Please read these Terms and Conditions carefully before using the www.eg.edu-fun.com operated by Edu-Fun
+                Egypt Your access to and use of the Service is conditioned on your acceptance of and compliance with
+                these
+                Terms. These Terms apply to all visitors, users and others who access or use the Service.</h4>
+            <h4>By accessing or using the Service, you agree to be bound by these Terms. If you disagree with any part
+                of
+                the terms then you may not access the Service. The Terms and Conditions agreement for Edu-Fun Egypt has
+                been
+                created with the help of Terms and Conditions Generator.</h4>
+        </div>
+        {% for term in terms %}
+        <div class="ui segments">
+            <div class="ui center aligned segment">
+                <h3 class="FntFmly">{{ term.name }}</h3>
+            </div>
+            <div class="ui secondary segment">
+                <p class="FntFmly">{{ term.condition }}</p>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+
+{% include '__partials/__page_footer_padding.html' %}
+
+{% endblock content %}

@@ -1,0 +1,77 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}{{ page }}{% endblock title %}
+{% block content %}
+
+{% include '__partials/__page_title_header.html' %}
+
+{% include '__partials/__divider.html' %}
+
+<div class="ui container">
+    <div class="ui grid">
+        <div class="justified column">
+            <div class="ui basic segment">
+                <p class="ui header">Raw Materials</p>
+                <p>We use only the best, natural, high quality materials, which include European beech wood and German
+                    paints and varnishes. All the different stages involved in the making and packaging of our high
+                    quality products are carried out in our own existing factory and in our new second factory.</p>
+                <p>We pride ourselves on our high quality products, which must all pass the highest standards in quality
+                    and rigid safety standards. Safety is ensured by all our products complying with the European Norms
+                    EN71.</p>
+                <p>Edu-Fun<i class="registered outline icon"></i> was the first factory in the world to import European
+                    materials such as (beech wood, plywood,
+                    paints) then process, manufacture and send them back to the European market and the case remains as
+                    it is. On the other hand, other countries using local cheaper options.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% include '__partials/__divider.html' %}
+
+<div class="ui container">
+    <div class="ui grid">
+        <div class="justified column">
+            <div class="ui basic segment">
+                <p class="ui header">Safety Standards & Certificates</p>
+            </div>
+            <div class="ui basic segment">
+                <p>Edu-Fun<i class="registered outline icon"></i> meets the latest high international standards of
+                    safety for our whole product range.
+                    Compliant with international standards, even the strict European CE standards, our products are safe
+                    for preschool and kindergarten children. We worry about your children's safety, so you do not have
+                    to. All of our products and production facilities are certified with the following international and
+                    European.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% include '__partials/__divider.html' %}
+
+<div class="ui container">
+    <div class="ui equal width grid">
+        <div class="column">
+            <img src="{% static 'images/about.png' %}" class="ui fluid image"/>
+        </div>
+        <div class="column">
+            <img src="{% static 'images/about.png' %}" class="ui fluid image"/>
+        </div>
+        <div class="column">
+            <img src="{% static 'images/about.png' %}" class="ui fluid image"/>
+        </div>
+        <div class="column">
+            <img src="{% static 'images/about.png' %}" class="ui fluid image"/>
+        </div>
+        <div class="column">
+            <img src="{% static 'images/about.png' %}" class="ui fluid image"/>
+        </div>
+        <div class="column">
+            <img src="{% static 'images/about.png' %}" class="ui fluid image"/>
+        </div>
+    </div>
+</div>
+
+{% include '__partials/__page_footer_padding.html' %}
+
+{% endblock content %}

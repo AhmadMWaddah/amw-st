@@ -1,0 +1,57 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}{{ page }}{% endblock title %}
+{% block content %}
+
+{% include '__partials/__page_title_header.html' %}
+
+{% include '__partials/__divider.html' %}
+
+<div class="ui container">
+    <div class="ui grid">
+        <div class="column">
+            <div class="ui basic segment">
+                <img src="{% static 'images/about.png' %}" class="ui fluid image">
+            </div>
+        </div>
+    </div>
+</div>
+
+{% include '__partials/__divider.html' %}
+
+<div class="ui container">
+    <div class="ui grid">
+        <div class="justified column">
+            <div class="ui basic segment">
+                <p>We design all of our furniture collection according to the European standards for chairs and tables
+                    for educational institutions which was approved in January 2007. Children should always use the
+                    appropriate size of chairs or table to ensure good posture and prevent causing problems or
+                    distortions for them while growing. Ergonomic seating requires adjustable furniture to suits
+                    different body heights.</p>
+            </div>
+            <div class="ui basic segment">
+                <p>In this table you can choose the correct seat and table height suitable for the student age.
+                    <span class="ui basic segment">
+                <span class="ui small green header">BS EN 1729</span>
+                </span>European standards for chairs and tables.
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% include '__partials/__divider.html' %}
+
+<div class="ui container">
+    <div class="ui grid">
+        <div class="column">
+            <div class="ui basic segment">
+                <img src="{% static 'images/about.png' %}" class="ui fluid image">
+            </div>
+        </div>
+    </div>
+</div>
+
+{% include '__partials/__page_footer_padding.html' %}
+
+{% endblock content %}

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    {% include '__partials/__head_tag.html' %}
+</head>
+<body>
+{% include '__partials/__nav-bar.html' %}
+<div class="ui padded basic segment"></div>
+{% include '__partials/__social_icons.html' %}
+{% block content %}
+
+{% endblock content %}
+{% include '__partials/__footer.html' %}
+{% include '__partials/__author.html' %}
+{% include '__partials/__scripts_tags.html' %}
+</body>
+</html>

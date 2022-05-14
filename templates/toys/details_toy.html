@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}{{ toy.name }}{% endblock title %}
+{% block content %}
+
+{% include '__partials/__page_title_header.html' %}
+
+{% include '__partials/__divider.html' %}
+
+<div class="ui relaxed two column grid container">
+    <div class="column">
+        <img class="ui image" src="{{ toy.image.url }}">
+    </div>
+    <div class="column">
+        <div class="ui raised segment">
+            <p>{{ toy.description }}</p>
+        </div>
+        <p>Code: {{ toy.sku }}</p>
+        <p>Category: {{ toy.category }}</p>
+        <p>Age: {{ toy.age }} Years</p>
+        <p>Dimensions: {{ toy.dimensions }} cm</p>
+        <p>Barcode: {{ toy.barcode }}</p>
+        <div class="ui green compact right floated segment">
+            <button class="ui button">Add To Cart</button>
+        </div>
+    </div>
+</div>
+
+{% include '__partials/__page_footer_padding.html' %}
+
+{% endblock content %}

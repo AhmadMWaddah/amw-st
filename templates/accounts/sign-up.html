@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}{{ page }}{% endblock title %}
+{% block content %}
+
+{% include '__partials/__page_title_header.html' %}
+
+{% include '__partials/__divider.html' %}
+
+<div class="ui basic segment">
+    <h2 class="ui center aligned icon header">
+        <i class="circular users icon"></i>
+        Make Sure We Have Your EMail To Send Our Offers.
+    </h2>
+</div>
+
+<div class="ui middle aligned center aligned grid container">
+    <div class="ten wide column">
+        <div class="ui green raised segment">
+            <form class="ui large form">
+                <div class="ui stacked segment">
+                    <div class="field">
+                        <div class="ui left icon input">
+                            <i class="user icon"></i>
+                            <input type="text" name="email" placeholder="E-mail address">
+                        </div>
+                    </div>
+                    <div class="field">
+                        <div class="ui left icon input">
+                            <i class="lock icon"></i>
+                            <input type="password" name="password" placeholder="Password">
+                        </div>
+                    </div>
+                    <div class="ui fluid large basic green submit button">Sign In</div>
+                </div>
+                <div class="ui error message"></div>
+            </form>
+        </div>
+        <div class="ui green raised segment">
+            <div class="ui message">
+                New to us? <a href="#">Sign Up</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% include '__partials/__page_footer_padding.html' %}
+
+{% endblock content %}

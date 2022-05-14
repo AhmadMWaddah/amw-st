@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}{{ page }}{% endblock title %}
+{% block content %}
+
+{% include '__partials/__page_title_header.html' %}
+
+{% include '__partials/__divider.html' %}
+
+<div class="ui container">
+    <div class="ui grid">
+        <div class="column">
+            <div class="ui basic segment">
+                <img src="{% static 'images/about.png' %}" class="ui fluid image">
+            </div>
+        </div>
+    </div>
+</div>
+
+{% include '__partials/__divider.html' %}
+
+<div class="ui container">
+    <div class="ui grid">
+        <div class="justified column">
+            <div class="ui basic segment">
+                <p>At Edu-Fun<i class="registered outline icon"></i>, it is our belief that children are the future. In order to create the best possible
+                    future for them, we must give them the best possible start.</p>
+            </div>
+            <div class="ui basic segment">
+                <p>Edu-Fun<i class="registered outline icon"></i> products not only encourage and stimulate young minds, we also protect their growing bodies
+                    with ergonomically sound designs. We only use the finest quality, ethically sourced and sustainable
+                    materials to ensure that the environment our children grow up in, is as happy and healthy as they
+                    are.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% include '__partials/__page_footer_padding.html' %}
+
+{% endblock content %}

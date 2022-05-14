@@ -1,0 +1,74 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}{{ page }}{% endblock title %}
+{% block content %}
+
+{% include '__partials/__page_title_header.html' %}
+
+{% include '__partials/__divider.html' %}
+
+<div class="ui center aligned container">
+    <div class="ui four columns grid">
+        {% for project in projects %}
+        <div class="column">
+            <div class="ui cards">
+                <div class="ui green raised segment">
+                    <div class="ui fluid card">
+                        <div class="image">
+                            <img src="{% static 'images/about.png' %}" class="ui fluid image"/>
+                        </div>
+                        <div class="content">
+                            <div class="header">{{ project.name }}</div>
+                            <div class="meta">{{ project.area }}</div>
+                            <div class="ui raised green segment">
+                                <div class="ui botton" onclick="project_images_modal()">View More</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="ui modal Project_Modal">
+                <div class="ui three column grid container">
+                    <div class="one wide column">
+                        <button id="Project_Image_Flipper_Left" class="ui center icon button" onclick="flip_me_left()">
+                            <i class="angle double left icon"></i>
+                        </button>
+                    </div>
+                    <div class="fourteen wide column">
+                        <div class="ui cube shape">
+                            <div class="sides">
+                                <div class="active side">
+                                    <div class="content">
+                                        <div class="center">
+                                            <img src="{% static 'images/about.png' %}" class="ui rounded massive image"/>
+                                        </div>
+                                    </div>
+                                </div>
+                                {% for image in images %}
+                                <div class="side">
+                                    <div class="content">
+                                        <div class="center">
+                                            <img src="{% static 'images/about.png' %}"
+                                                 class="ui rounded massive image"/>
+                                        </div>
+                                    </div>
+                                </div>
+                                {% endfor %}
+                            </div>
+                        </div>
+                    </div>
+                    <div class="one wide column">
+                        <button id="Project_Image_Flipper_Right" class="ui icon button" onclick="flip_me_right()">
+                            <i class="angle double right icon"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+
+{% include '__partials/__page_footer_padding.html' %}
+
+{% endblock content %}

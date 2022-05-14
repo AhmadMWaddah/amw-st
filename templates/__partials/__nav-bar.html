@@ -1,0 +1,91 @@
+{% load static %}
+<div class="ui grid">
+    <div class="column">
+        <div class="ui borderless top fixed menu">
+            <a class="header item" href="{% url 'pages:index' %}">
+                <img src="{% static 'images/Anonymus.png' %}"/>
+            </a>
+            <div class="ui simple dropdown item">
+                About Us
+                <i class="dropdown icon"></i>
+                <div class="menu">
+                    <a class="item" href="{% url 'pages:history' %}">History</a>
+                    <a class="item" href="{% url 'pages:vision_mission' %}">Vision & Mission</a>
+                    <a class="item" href="{% url 'pages:why_egypt' %}">Why Egypt</a>
+                    <a class="item" href="{% url 'pages:safety_cetificates' %}">Safety & Certificates</a>
+                </div>
+            </div>
+            <div class="ui simple dropdown item">
+                <div>Shop</div>
+                <i class="dropdown icon"></i>
+                <div class="menu">
+                    {% for category in categories %}
+                    <a class="item" href="{{ category.get_absolute_url }}">{{ category.name }}</a>
+                    {% endfor %}
+                </div>
+            </div>
+            <div class="ui simple dropdown item">
+                Inspiration
+                <i class="dropdown icon"></i>
+                <div class="menu">
+                    <a class="item" href="{% url 'pages:development_milestone' %}">Child Development Milestone</a>
+                    <a class="item" href="{% url 'pages:room_concepts' %}">Room Concept</a>
+                    <a class="item" href="{% url 'pages:size_guide' %}">Size Guide</a>
+                    <a class="item" href="{% url 'pages:all_projects' %}">Projects</a>
+                    <a class="item" href="{% url 'pages:timeline' %}">Timeline</a>
+                </div>
+            </div>
+            <a class="green item" href="{% url 'pages:our_stores' %}">Our Stores</a>
+            <a class="item" href="{% url 'pages:all_distributors' %}">Distributors</a>
+            <div class="ui simple dropdown item">
+                Support
+                <i class="dropdown icon"></i>
+                <div class="menu">
+                    <a class="item" href="{% url 'pages:faqs' %}">FAQs</a>
+                    <a class="item" href="{% url 'pages:terms_conditions' %}">Terms & Conditions</a>
+                </div>
+            </div>
+            <div class="ui simple dropdown item">
+                Contact Us
+                <i class="dropdown icon"></i>
+                <div class="menu">
+                    <a class="item" href="{% url 'pages:sales_offices' %}">Sales Offices</a>
+                    <a class="item" href="{% url 'pages:world_wide' %}">Representative Worldwide</a>
+                </div>
+            </div>
+            <a class="item" href="{% url 'admin:index' %}">Admin</a>
+            <div class="right menu">
+                <div class="item">
+                    <a class="ui icon input">
+                        <input type="text" placeholder="Search...">
+                        <i class="circular search link icon"></i>
+                    </a>
+                </div>
+                {% if user.is_authenticated %}
+                <div class="item">
+                    <a href="">
+                        <i class="user circle large icon"></i>
+                    </a>
+                </div>
+                {% else %}
+                <div class="item">
+                    <a href="{% url 'accounts:account_sign_in' %}">
+                        <i class="user large icon"></i>
+                    </a>
+                </div>
+                <div class="item">
+                    <a href="{% url 'accounts:account_sign_up' %}">
+                        <i class="user plus large icon"></i>
+                    </a>
+                </div>
+                {% endif %}
+                <div class="item">
+                    <i class="cart plus large icon"></i>
+                </div>
+                <div class="item">
+                    <i class="shopping cart large icon"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
