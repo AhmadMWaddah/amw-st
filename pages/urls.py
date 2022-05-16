@@ -18,7 +18,6 @@ urlpatterns = [
     path('size-guide', views.size_guide, name='size_guide'),
     path('timeline', views.timeline, name='timeline'),
     path('vision-mission', views.vision_mission, name='vision_mission'),
-    path('why-egypt', views.why_egypt, name='why_egypt'),
     path('development-milestone', views.development_milestone, name='development_milestone'),
     path('world-wide', views.world_wide, name='world_wide'),
     path('project/<slug:slug>', views.detail_project, name='detail_project'),

@@ -7,7 +7,6 @@ amwdb.sqlite3
 media
 venv
 assets-dev
-assets
 
 # Backup files # 
 *.bak 

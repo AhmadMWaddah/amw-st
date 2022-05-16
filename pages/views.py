@@ -107,12 +107,6 @@ def vision_mission(request):
     return render(request, 'pages/vision-mission.html', context)
 
 
-def why_egypt(request):
-    page = 'Why Egypt'
-    context = {'page': page}
-    return render(request, 'pages/why-egypt.html', context)
-
-
 def development_milestone(request):
     page = 'Child Development Milestone'
     context = {'page': page}

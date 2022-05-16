@@ -1,0 +1,16 @@
+.FntFmly{font-family:"Century Gothic";}
+
+#Social-Fixed {
+    position: fixed;
+    top: 15vh;
+}
+
+.ui.shape {
+    height: 85vh !important;
+}
+.ui.cube.shape .side, .ui.cube.shape .active.side {
+    height: 100% !important;
+}
+.HeightMe {
+    height: 30em !important;
+}

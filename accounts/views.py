@@ -18,5 +18,9 @@ def account_sign_in(request):
 
 
 def account_info(request, pk):
+    page = ''
+    context = {
+        'page': page,
+    }
     context = {}
     return render(request, 'accounts/account-info.html', context)
